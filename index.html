@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Sketch App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="canvas-container">
+            <video id="webcam" autoplay playsinline></video>
+            <img id="overlay-img" src="" alt="તમારો સ્કેચ અહિયાં દેખાશે" style="display: none;">
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="image-loader" class="upload-btn">ફોટો અપલોડ કરો</label>
+                <input type="file" id="image-loader" accept="image/*">
+            </div>
+
+            <div class="control-group">
+                <label>ઓપેસિટી (ઝાંખપ): <span id="opacity-val">50%</span></label>
+                <input type="range" id="opacity-slider" min="0" max="1" step="0.01" value="0.5">
+            </div>
+
+            <div class="control-group filters">
+                <button id="btn-normal" class="active">Normal</button>
+                <button id="btn-bw">Black & White</button>
+                <button id="btn-invert">Invert (X-Ray)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
